@@ -1,0 +1,277 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Calibri, sans-serif;
+    background: url(../img/wallpaper1.jpg) center no-repeat;
+}
+
+h1{
+    font-family: "Broadway", sans-serif;
+    color: #070233;
+    font-size: 30px;
+    margin: 0 20px;
+    text-align: center;
+}
+
+h2{
+    font-family: "Broadway", sans-serif;
+    color: #fff;
+    padding: 15px;
+    background: #10253f;
+    border: 3px solid #385d8a;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin: 30px 33px;
+    letter-spacing: 3px;
+    width: 300px;
+}
+
+h3{
+    font-family: Calibri, sans-serif;
+    font-size: 30px;
+    color: #10253f;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.container{
+    width: 800px;
+    max-width: 1000px;
+    margin: 0 auto ;
+    box-shadow: -3px 5px 30px 1px rgb(212, 210, 210), 5px 5px 30px 1px rgb(212, 210, 210);
+}
+
+.main{
+    display: flex;
+}
+
+.aside-left{
+    width: 45%;
+    background-color: rgb(196, 189, 189);
+    text-align: center;
+}
+
+.avatar{
+    border-radius: 50%;
+    border: 3px solid #10253f;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.aside-right{
+    width: 65%;
+    background-color: #fff;
+    border-left: #10253f solid 5px;
+}
+
+.info-perso{
+    margin: 0 30px;
+    text-align: left;
+}
+
+.info-perso a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+}
+
+.info-perso a::before{
+    content: '';
+    width: 25px;
+    vertical-align: middle;
+    display: inline-block;
+    height: 25px;
+    background: url(../img/outline_location_on_black_48dp.png) center center/ 25px 25px no-repeat;
+}
+
+.tel a::before{
+    width: 24px;
+    height: 30px;
+    background: url(../img/outline_call_black_48dp.png) center center/ 25px 25px no-repeat;
+}
+
+.mail a::before{
+    width: 30px;
+    height: 30px;
+    background: url(../img/outline_email_black_48dp.png) center center/ 25px 25px no-repeat;
+}
+
+.born a::before{
+    width: 30px;
+    height: 30px;
+    background: url(../img/event.svg) center center/ 25px 25px no-repeat;
+    margin-top: -6px;
+}
+
+h2::before{
+    content: '';
+    width: 40px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -2px;
+    height: 28px;
+    background: url(../img/outline_translate_white_48dp.png) center center/ 30px 25px no-repeat;
+    margin-right: 20px;
+}
+
+ul{
+    list-style-image: url(../img/puce.png);
+    width: 300px;
+    text-align: left;
+    margin-left: 30px;
+}
+
+span{
+    font-weight: bold;
+    font-size: 19px;
+    margin-left: 20px;
+}
+
+.qualites h2::before{
+    background: url(../img/outline_person_white_48dp.png) center center/ 30px 25px no-repeat;
+}
+
+.loisir h2::before{
+    background: url(../img/outline_games_white_48dp.png) center center/ 30px 25px no-repeat;
+}
+
+.aside-right-body ul{
+    width: 350px;
+}
+
+.formations h2::before{
+    background: url(../img/outline_school_white_48dp.png) center center/ 30px 30px no-repeat;
+}
+
+mark{
+    background-color: inherit;
+    margin-left: 71px;
+}
+
+.logiciels h2::before{
+    background: url(../img/outline_emoji_objects_white_48dp.png) center center/ 30px 30px no-repeat;
+}
+
+.bloc{
+    display: flex;
+    width: 350px;
+    margin-left: 30px;
+}
+
+.bloc-left,.bloc-right{
+    width: 50%;
+}
+
+.bloc-right .log:first-of-type{
+    margin-top: 38px;
+}
+
+.log{
+    display: flex;
+    margin: 15px 0;
+}
+
+.father{
+    width: 77%;
+    border: 2px solid #385d8a;
+    border-radius: 5px;
+    flex: none;
+    height: 14px;
+    margin-top: 6px;
+}
+
+.logo::before{
+    content: '';
+    width: 40px;
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    height: 30px;
+    background: url(../img/Adobe-Photoshop-Logo.png) center center/ 30px 25px no-repeat;
+}
+
+.child{
+    height: 10px;
+    background-color: #10253f;
+    width: 75%;
+}
+
+.word::before{
+    background: url(../img/word.png) center center/ 30px 25px no-repeat;
+}
+
+.word, .excel,.power{
+    width: 90%;
+}
+
+.excel::before{
+    background: url(../img/excel.png) center center/ 30px 25px no-repeat;
+}
+
+.power::before{
+    background: url(../img/Microsoft_PowerPoint_2013-2019_logo.svg.png) center center/ 30px 25px no-repeat;
+}
+
+.access::before{
+    background: url(../img/access.jpg) center center/ 30px 25px no-repeat;
+}
+
+.access{
+    width: 70%;
+}
+
+.illustrator::before{
+    background: url(../img/Illustrator-Logo.png) center center/ 30px 25px no-repeat;
+}
+
+.illustrator,.premier{
+    width: 65%;
+}
+
+.premier::before{
+    background: url(../img/adobe-premiere-pro-logo-1-1.png) center center/ 30px 25px no-repeat;
+}
+
+.langages h2::before{
+    background: url(../img/outline_code_white_48dp.png) center center/ 30px 30px no-repeat;
+}
+
+.html::before{
+    background: url(../img/5847f5bdcef1014c0b5e489c.png) center center/ 40px 30px no-repeat;
+    margin-top: -3px;
+}
+
+.html{
+    width: 80%;
+}
+
+.css::before{
+    background: url(../img/1452px-CSS3_logo_and_wordmark.svg.png) center center/ 25px 25px no-repeat;
+    margin-top: -3px;
+}
+
+.c::before{
+    background: url(../img/C_Logo.png) center center/ 25px 25px no-repeat;
+}
+
+.c{
+    width: 50%;
+}
+
+.java::before{
+    background: url(../img/Java_Logo.png) center center/ 25px 25px no-repeat;
+    margin-top: -5px;
+}
+
+.java{
+    width: 50%;
+}
+
+.python::before{
+    background: url(../img/159-1595848_python-logo-png-transparent-background-python-logo-png.png) center center/ 25px 25px no-repeat;
+    margin-top: -1px;
+}

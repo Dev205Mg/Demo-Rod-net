@@ -1,0 +1,624 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Bold.ttf) format("TrueType");
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Regular.ttf) format("TrueType");
+    font-weight: normal;
+}
+
+/*--------------------------------- topbar / header-----------------------*/
+
+body{
+    margin: 0;
+    background-color: #f1f1f1;
+    color: rgba(0, 0, 0, .6);
+    font-family: "Roboto", sans-serif ;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.topbar{
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+}
+
+.topbar-logo{
+    width: 50px;
+    padding: 11px 0;
+    cursor: zoom-in;
+}
+
+.topbar-nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.topbar-nav li:hover .sous-menu{
+    display: block;
+}
+
+.topbar nav{
+    margin-bottom: 10px;
+    line-height: 2em;
+}
+
+.topbar li{
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+}
+
+.sous-menu{
+    display: none;
+    position: absolute;
+    background-color: #2c3e50;
+    width: 200px;
+    text-align: left;   
+}
+
+.sous-menu li{
+    display: block;
+}
+
+.topbar a{
+    display: inline-block;
+    margin: 0 7px;
+}
+
+.topbar-nav a,.topbar-nav li .sous-menu li a{
+    color: rgba(255, 255, 255, .67);
+    transition: color .3s;
+}
+
+.topbar-nav li:hover a,.topbar-nav li .sous-menu li a:hover,.topbar-nav a.active{
+    color: #fff;
+}
+/*------------------------------------- fin topbar/ end header--------------------------------*/
+/*--------------------------------------debut div contenaire/ begin main-----------------------*/
+
+.container{
+    padding: 0 15px;
+    max-width: 1080px;
+    margin-top: 22vh;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.aside-nav{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.aside-nav a{
+    display: block;
+    width: 50%;
+     
+    padding: 0.6em 0;
+    transition: .3s;
+    border: 1px solid transparent;
+    padding-left: 9px;
+}
+
+.aside-nav a::before{
+    content: '';
+    display: inline-block;
+    width: 23.5px;
+    height: 20px;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-right: 20px;
+    opacity: .67;
+    background: url(../img/person.svg) center center/ contain no-repeat;
+    transition: opacity .3s;
+}
+
+.aside-nav a.aside-nav-sms::before{
+    background: url(../img/sms.svg) center center/ contain no-repeat;
+}
+
+.aside-nav a.aside-nav-groupe::before{
+    background: url(../img/groups.svg) center center/ contain no-repeat;
+}
+
+.aside-nav a.aside-nav-amis::before{
+    background: url(../img/amis.svg) center center/ contain no-repeat;
+}
+
+.aside-nav a.active, .aside-nav a:hover{
+    color: #000;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    background: #ffffff;
+    font-weight: bold;
+}
+
+.aside-nav a.active::before,
+.aside-nav a:hover::before{
+    opacity: 1;
+}
+/*------------------------------------------- end aside nav-----------------------*/
+/*------------------------------------- begin main and sms----------------------*/
+
+.sms-header{
+    background: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.sms-avatar{
+    width: 40px;
+    border-radius: 50%;
+    margin: 15px;
+}
+
+.sms-header-left p{
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    flex: none;
+    margin-top:23px;
+
+}
+
+.sms-header-left, .sms-header-rigth{
+    display: flex;
+}
+
+.sms-cams::before{
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(../img/camera.svg) center center/ 20px 20px no-repeat;
+    margin: 23px;
+}
+
+.sms-info::before{
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(../img/info.svg) center center/ 20px 20px no-repeat;
+    margin: 23px;
+}
+
+.sms-appel::before{
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(../img/call.svg) center center / 20px 20px no-repeat;
+    margin: 23px;
+}
+
+.sms-video::before{
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(../img/video.svg) center center / 20px 20px no-repeat;
+    margin: 23px;
+}
+
+.sms-cams,.sms-video,.sms-appel{
+    width: 40px;
+}
+
+.sms-amis{
+    display: flex;
+}
+
+.amis-avatar{
+    border-radius: 50%;
+}
+
+.amis p{
+    margin: 0;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.amis{
+    margin: 10px 10px;
+    text-align: center;
+}
+
+.footer-amis{
+    display: flex;
+    margin: 10px 0;
+}
+
+.foot{
+    margin:  0 10px;
+}
+
+.amis-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.amis-last-sms{
+    margin-top: auto;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.amis-title{
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 5px;
+}
+
+.sms-footer{
+    background: #2c3e50;
+    display: flex;
+    flex-direction: row-reverse;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    clear: both;
+}
+
+.sms-cage{
+    margin: 20px;
+}
+
+.sms-control{
+    height: 35px;
+    border-radius: 20px;
+}
+
+.boutton{
+    height: 30px;
+}
+
+.sms-cams{
+    margin-right: auto;
+}
+
+.sms-list{
+    margin: 20px auto 20px 20px;
+}
+
+.sms-chats{
+    margin: 20px;
+}
+
+.online, .offline{
+    font-size: 12px;
+}
+
+.sms-chats::before{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(../img/groups.svg) center center / 20px 20px no-repeat;
+    margin-right: 5px;
+}
+
+.sms-list::before{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(../img/amis.svg) center center / 20px 20px no-repeat;
+    margin-right: 5px;
+}
+
+.conversation-left-avatar{
+    border-radius: 50%;
+    margin-top: 11px;
+    margin-left: 11px;
+}
+
+.bulle-left{
+    border: 1px solid #2c3e50;
+    background-color: #2c3e50;
+    border-radius: 10px;
+    width: auto;
+    padding: 5px 15px;
+    text-align: center;
+    margin-top: 12px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+.conversation-left{
+    display: flex;
+    clear: both;
+}
+
+.conversation-right{
+    float: right;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.bulle-right{
+    border: 1px solid #2c3e50;
+    background-color: #2c3e50;
+    border-radius: 10px;
+    width: auto;
+    padding: 5px 15px;
+    text-align: center;
+    margin-top: 12px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+.conversation .conversation-left:last-child{
+    margin-bottom: 20px;
+}
+
+/*-----------------------------end main**************************************/
+/*-----------------------------begin aside/ friend *************************/
+
+.right{
+    margin-top: 20px;
+}
+
+.aside-title{
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 18px;
+}
+
+.aside-title::after{
+    content: '';
+    display: block;
+    height: 1px;
+    margin-top: 4px;
+    background: #000;
+}
+
+.friend-list{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.friend{
+    margin: 14px 0;
+    display: flex;
+}
+
+.friend-avatar{
+    margin-right: 10px;
+    flex: none;
+    border-radius: 50%;
+}
+
+.friend-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.friend-name{
+    display: block;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.friend-add{
+    font-size: 12px;
+    color: #000;
+    margin-top: auto;
+    margin-bottom: 3px;
+}
+
+.friend-add::before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 4px;
+    width: 23px;
+    height: 20px;
+    background: url(../img/person_add.svg) center center / 20px 20px no-repeat;
+}
+
+.online::before{
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: green;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.offline::before{
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: gray;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/*-----------------------------end aside/ friend--***********************/
+/*--------------------------------------fin div contenaire/ end main-----------------------*/
+
+@media only screen and (min-width:623px){ /********* desktop special topbar*/
+    .topbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;
+        padding: 0 25px;
+    }
+
+    .flex{
+        display: flex;
+    }
+
+    .topbar-logo, .topbar-nav{
+        padding: 0;
+    }
+    .topbar-nav{
+        margin-top: 16px;
+    }
+    .topbar-logo{
+        margin-top: 5px;
+    }
+    .topbar-nav a{
+        margin: 0 20px;
+    }
+
+    .container{
+        margin-top: 13vh;
+    }
+}
+
+@media screen and (min-width: 900px){/************ desktop special container*/
+    .container{
+        display: flex;
+        margin-top: 14vh;
+    }
+
+    .aside-nav{
+        width: 180px;
+        display: block;
+        flex: none;
+    }
+    
+    .aside-nav a{
+        width: 100%;
+    }
+
+    .main{
+        width: 100%;
+        margin-left: 30px;
+        margin-right: 30px;
+        background-color: #fff;
+    }
+
+    .aside{
+        width: 310px;
+        flex: none;
+    }  
+    /*************************************************************/
+
+    .right{
+        margin-top: 0;
+    }
+
+    .aside-title{
+        margin-top: 0;
+    }
+    /*******************************/
+
+    .sms-amis{
+        display: none;
+    }
+}
+
+/*
+ fonction de chargement --------------------------------------------
+*/
+.loader {
+    background: url(../img/background1.png) no-repeat center;
+    height: 100%;
+    line-height: 635px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 40px;
+    color: rgb(221, 96, 12);
+    text-shadow:  0 0 5px rgba(139, 132, 55, 0.8),
+                  0 0 25px rgba(221, 218, 14, 0.8),
+                  0 0 200px rgba(221, 220, 0, 0.8);
+}
+
+.rodnet-icone{
+    width: 60px;
+    vertical-align: middle;
+}
+
+.loader-card{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50px;
+    /*border: 6px solid rgba(255, 255, 255, .4);*/
+    vertical-align: sub;
+    position: relative;
+}
+
+.loader-card::after{
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 6px solid transparent;
+    border-top-color: rgb(243, 81, 6);
+    border-bottom-color: rgb(13, 134, 9);
+    border-radius: 50px;
+    -webkit-animation: spin 1s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+            animation: spin 1s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+}
+
+@-webkit-keyframes spin{
+    0%{
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+
+@keyframes spin{
+    0%{
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+
+/*
+ terminaison de chargement -----------------------------------------
+*/

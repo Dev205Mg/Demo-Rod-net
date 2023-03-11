@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="img/rodnet_icone.png" type="image/x-icon">
+    <title>Connecter-vous ! ou S'inscrire ! sur Rodnet</title>
+</head>
+<body>
+    <main class="main">
+        <aside class="aside-left">
+            <h1 class="aside-left-title"><img src="img/rodnet_icone.png" alt="logo mini de Rodnet" class="rodnet-icone">Rodnet </h1>
+            <p>Accéder à Rodnet pour rester connecter et se contacter avec votre entourage à tout moment</p>
+        </aside>
+        <aside class="aside-right" id="card">
+            <form action="index.html" class="front">
+                <fieldset>
+                    <legend>Utilisateur</legend>
+                    <h2>Connecter-vous</h2>
+                    <hr>
+                    <input type="text" placeholder="E-mail ou Numéro tel" required><br>
+                    <input type="password" name="password" id="" placeholder="Mot de passe" required><br>
+                    <button type="submit" class="submit">Se connecter</button><br>
+                    <a href="#" class="mdp">Mot de passe oublier</a>
+                    <button type="button" class="btn" onclick="openInscription()">Créer un compte</button>
+                </fieldset>
+            </form>
+            <form action="index.html" class="back">
+                <fieldset>
+                    <legend>Utilisateur</legend>
+                    <h2>Inscription</h2>
+                    <hr>
+                    <input type="text" placeholder="Nom et Prénom" required><br>
+                    <input type="date" name="Date de naissance" id="">
+                    <input type="password" name="password" id="" placeholder="Mot de passe" required><br>
+                    <button type="submit" class="submit">S'inscrire</button><br>
+                    <button type="button" class="btn" onclick="openConnecter()">Déja un compte</button>
+                </fieldset>
+            </form>
+        </aside>
+    </main>
+    <script>
+        var card = document.getElementById("card");
+
+        function openInscription(){
+            card.style.transform = "rotateY(-180deg)";
+        }
+
+        function openConnecter(){
+            card.style.transform = "rotateY(0deg)";
+        }
+    </script>
+</body>
+</html>
